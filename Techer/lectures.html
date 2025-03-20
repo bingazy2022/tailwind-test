@@ -139,14 +139,14 @@
                     
                     <!-- إدخال أسم المحاضرة -->
                     <label class="block font-semibold"> أسم المحاضرة:</label>
-                    <input type="text" class="w-full p-2 border rounded mb-4" placeholder="أدخل أسم المحاضرة">
+                    <input type="text" class="w-full p-2 border rounded mb-4 focus:outline-none focus:ring-2 focus:ring-green-700" placeholder="أدخل أسم المحاضرة">
                     <!-- إدخال رابط الفيديو -->
                     <label class="block font-semibold">رابط الفيديو:</label>
-                    <input type="text" class="w-full p-2 border rounded mb-4" placeholder="أدخل رابط الفيديو">
+                    <input type="text" class="w-full p-2 border rounded mb-4 focus:outline-none focus:ring-2 focus:ring-green-700" placeholder="أدخل رابط الفيديو">
                     
                     <!-- رفع ملف الفيديو -->
                     <label class="block font-semibold">رفع ملف فيديو:</label>
-                    <input type="file" class="w-full p-2 border rounded mb-4" accept="video/*">
+                    <input type="file" class="w-full p-2 border rounded mb-4 " accept="video/*">
                     
                     <!-- رفع ملف PDF -->
                     <label class="block font-semibold">رفع ملف المحاضرة (PDF):</label>
@@ -173,49 +173,7 @@
             </script>
         
         
-        
-        <!-- =========================================================================================================================
-        =========================================  اضافه للكود اعلاه النافذه المخفيه زر تعديل محاضرة =============================================================== -->
-        <!-- الخلفية المعتمة -->
-        <div id="modalEdit1" class="fixed inset-0 bg-black bg-opacity-50 hidden flex justify-center items-center">
-            <!-- النافذة المنبثقة -->
-            <div class="bg-white p-6 rounded-lg shadow-lg w-1/2">
-                <h2 class="text-xl font-bold mb-4 text-center">تعديل المحاضرة  </h2>
-                
-                <!-- إدخال أسم المحاضرة -->
-                <label class="block font-semibold"> أسم المحاضرة:</label>
-                <input type="text" class="w-full p-2 border rounded mb-4" placeholder="أدخل أسم المحاضرة">
-                <!-- إدخال رابط الفيديو -->
-                <label class="block font-semibold">رابط الفيديو:</label>
-                <input type="text" class="w-full p-2 border rounded mb-4" placeholder="أدخل رابط الفيديو">
-                
-                <!-- رفع ملف الفيديو -->
-                <label class="block font-semibold">رفع ملف فيديو:</label>
-                <input type="file" class="w-full p-2 border rounded mb-4" accept="video/*">
-                
-                <!-- رفع ملف PDF -->
-                <label class="block font-semibold">رفع ملف المحاضرة (PDF):</label>
-                <input type="file" class="w-full p-2 border rounded mb-4" accept="application/pdf">
-                
-                <!-- رفع ملف الواجب -->
-                <label class="block font-semibold">رفع ملف الواجب:</label>
-                <input type="file" class="w-full p-2 border rounded mb-4">
-                
-                <!-- أزرار -->
-                <div class="flex justify-between mt-4">
-                    <button onclick="closeModalEdit1()" class=" bg-red-700  hover:bg-red-800 text-white px-4 py-2 rounded">إلغاء</button>
-                    <button class=" bg-green-700  hover:bg-green-800 text-white px-4 py-2 rounded"> تعديل</button>
-                </div>
-            </div>
-        </div>
-        <script>
-            function openModalEdit1() {
-                document.getElementById("modalEdit1").classList.remove("hidden");
-            }
-            function closeModalEdit1() {
-                document.getElementById("modalEdit1").classList.add("hidden");
-            }
-        </script>
+
     </div>
 
 
