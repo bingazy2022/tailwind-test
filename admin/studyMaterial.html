@@ -45,18 +45,18 @@
                     </ul>
                 </li>
                 <li>
-                    <button onclick="setActive(this)" class="menu-item w-full h-12 px-4 text-right flex justify-between items-center   hover:bg-green-500 rounded-xl">
+                    <button onclick="setActive(this)" class="menu-item w-full h-12 px-4 text-right flex justify-between items-center  hover:bg-green-500 rounded-xl">
                         <a href="deparyments.html" class="  w-full h-full flex items-center">الأقسام</a>
                     </button>
                 </li>
                 <li>
-                    <button onclick="setActive(this)" class="menu-item w-full h-12 px-4 text-right flex justify-between items-center  hover:bg-green-500 rounded-xl">
+                    <button onclick="setActive(this)" class="menu-item w-full h-12 px-4 text-right flex justify-between items-center bg-green-800 hover:bg-green-500 rounded-xl">
                         <a href="studyMaterial.html" class="  w-full h-full flex items-center">المواد الدراسية</a>
                     </button>
                 </li>
                 <li>
-                    <button onclick="setActive(this)" class="menu-item w-full h-12 px-4 text-right flex justify-between items-center bg-green-800 hover:bg-green-500 rounded-xl">
-                        <a href="#" class="  w-full h-full flex items-center">الإعلانات</a>
+                    <button onclick="setActive(this)" class="menu-item w-full h-12 px-4 text-right flex justify-between items-center hover:bg-green-500 rounded-xl">
+                        <a href="Display Announcements.html" class="  w-full h-full flex items-center">الإعلانات</a>
                     </button>
                 </li>
             </ul>
@@ -73,117 +73,89 @@
         <!-- Main Content -->
         <div class="flex-1 p-6">
             <h1 class="text-3xl  mb-6 font-semibold text-gray-700">لوحة التحكم</h1>
+
             <hr class="">
-            <h3 class="text-xl  my-2 font-semibold text-gray-600">أدارةالاعلانات</h3>
-            <div class="flex justify-center items-center mt-20">
-                <div class="w-full max-w-2xl p-6 bg-gradient-to-r from-green-400 to-green-800   rounded-xl shadow-lg shadow-black/50">
-                    <h2 class="text-3xl font-bold text-center text-white mb-6">الإعلانات</h2>
-                    <div class="flex justify-end">
-                        <button  class=" bg-gradient-to-r from-green-600 to-green-800   text-white px-4 py-2 rounded mb-4 hover:bg-gradient-to-r hover:from-green-700 hover:to-green-900 ">
-                            <a href="Announcements.html" class="  w-full h-full flex items-center">+ إضافة إعلان</a>
-                        </button>
+
+
+                <!-- ====== جدول المواد الدراسية ======== -->
+                <div id="addSubject" class=" py-8 font-semibold ">
+                    <div class="container mx-auto px-6 rounded-lg ">
+                        <h2 class="text-2xl font-semibold mb-4 text-gray-700">إدارة المواد الدراسية</h2>
+                        
+                        <div class="mb-4 flex justify-between items-center">
+                            <!-- زر إضافة مادة جديدة  -->
+                            <button class=" bg-green-700 text-white px-4 py-2 rounded hover:bg-green-800" onclick="openFormAddCorse()">+ إضافة مادة جديدة</button>
+                            <!-- زر البحث --> 
+                            <input type="search" placeholder="بحث..." class=" w-56 p-2 pr-14 rounded-full border bg-slate-100   focus:outline-none ">
+                            <button type="submit" class="absolute  bg-green-700 hover:bg-green-800 text-white rounded-full left-0 right-auto py-2 px-6 ml-56">بحث</button>
+                        </div>
+                        
+                        <!-- جدول عرض المواد --> 
+                        <table class="w-full bg-white border rounded-lg shadow-md">
+                            <thead class="bg-gray-200">
+                                <tr>
+                                    <th class="p-2 border">رمز المادة</th>
+                                    <th class="p-2 border">اسم المادة</th>
+                                    <th class="p-2 border">القسم</th>
+                                    <th class="p-2 border">الساعات</th>
+                                    <th class="p-2 border">الإجراء</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="text-center">
+                                    <td class="p-2 border">CS101</td>
+                                    <td class="p-2 border">مقدمة في علوم الحاسوب</td>
+                                    <td class="p-2 border">علوم الحاسوب</td>
+                                    <td class="p-2 border">3</td>
+                                    <td class="p-2 border">
+                                        <button class="bg-green-700 text-white px-2 py-1 rounded hover:bg-green-800">
+                                            <a href="articleDetails.html" class="  w-full h-full flex items-center"> عرض البيانات</a>
+                                        </button>
+                                        <button class="bg-red-600 text-white px-2 py-1 rounded hover:bg-red-700">حذف</button>
+                                    </td>
+                                </tr>
+                                <tr class="text-center">
+                                    <td class="p-2 border">ENG201</td>
+                                    <td class="p-2 border">اللغة الإنجليزية</td>
+                                    <td class="p-2 border">العلوم الإنسانية</td>
+                                    <td class="p-2 border">2</td>
+                                    <td class="p-2 border">
+                                        <button class="bg-green-700 text-white px-2 py-1 rounded hover:bg-green-800">
+                                            <a href="articleDetails.html" class="  w-full h-full flex items-center"> عرض البيانات</a>
+                                        </button>
+                                        <button class="bg-red-600 text-white px-2 py-1 rounded hover:bg-red-700">حذف</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
-        
                     
-                    <!-- إعلان واحد -->
-                    <div class="bg-green-50  p-5 rounded-lg shadow-md flex items-center justify-between hover:shadow-lg transition-all duration-300 mb-4">
-                        <div>
-                            <h3 class="text-xl font-semibold text-green-800">عنوان الإعلان</h3>
-                            <p class="text-gray-500 text-sm mt-1">تم النشر في: 2023-10-03 12:00</p>
-                            <div class="mt-4 space-x-3">
-                                <a href="#" class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-all">عرض</a>
-                                <a href="#" download class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-all">تحميل</a>
+                    <!-- نموذج إضافة مادة جديدة (مخفي بشكل افتراضي)  -->
+                    <div id="subjectForm" class="hidden fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 font-semibold">
+                        <div class="bg-gradient-to-b from-green-500 to-green-800 p-6 rounded-lg shadow-md w-96">
+                            <h2 class="text-xl font-bold text-white mb-4">إضافة مادة جديدة</h2>
+                            <input type="text" placeholder="رمز المادة" class="w-full mb-2 p-2 border rounded ">
+                            <input type="text" placeholder="اسم المادة" class="w-full mb-2 p-2 border rounded">
+                            <input type="text" placeholder="القسم" class="w-full mb-2 p-2 border rounded">
+                            <input type="number" placeholder="عدد الساعات" class="w-full mb-2 p-2 border rounded">
+                            <div class="flex justify-between">
+                                <button class="bg-gray-200 text-black px-4 py-2 rounded hover:bg-gray-400 ">حفظ</button>
+                                <button class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700" onclick="closeFormAddCorse()">إلغاء</button>
                             </div>
                         </div>
-                        <div class="flex flex-col space-y-2">
-                            <button onclick="editAnnouncement()" class="px-4 py-2 bg-green-700 text-white rounded-lg hover:bg-green-800 flex items-center gap-2 transition-all">تعديل
-                                <img src="../icons/add-document.svg" class="w-5 filter invert"> 
-                            </button>
-                            <button class="px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 flex items-center gap-2 transition-all">حذف
-                                <img src="../icons/trash.svg" class="w-5 filter invert"> 
-                            </button>
-                        </div>
                     </div>
-        
-                    <!-- إعلان ثاني -->
-                    <div class="bg-green-50  p-5 rounded-lg shadow-md flex items-center justify-between hover:shadow-lg transition-all duration-300 mb-4">
-                        <div>
-                            <h3 class="text-xl font-semibold text-green-800">عنوان الإعلان</h3>
-                            <p class="text-gray-500 text-sm mt-1">تم النشر في: 2023-10-03 12:00</p>
-                            <div class="mt-4 space-x-3">
-                                <a href="#" class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-all">عرض</a>
-                                <a href="#" download class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-all">تحميل</a>
-                            </div>
-                        </div>
-                        <div class="flex flex-col space-y-2">
-                            <button onclick="editAnnouncement()" class="px-4 py-2 bg-green-700 text-white rounded-lg hover:bg-green-800 flex items-center gap-2 transition-all">تعديل
-                                <img src="../icons/add-document.svg" class="w-5 filter invert"> 
-                            </button>
-                            <button class="px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 flex items-center gap-2 transition-all">حذف
-                                <img src="../icons/trash.svg" class="w-5 filter invert"> 
-                            </button>
-                        </div>
-                    </div>
-        
-                    <!-- إعلان ثالث -->
-                    <div class="bg-green-50  p-5 rounded-lg shadow-md flex items-center justify-between hover:shadow-lg transition-all duration-300 mb-4">
-                        <div>
-                            <h3 class="text-xl font-semibold text-green-800">عنوان الإعلان</h3>
-                            <p class="text-gray-500 text-sm mt-1">تم النشر في: 2023-10-03 12:00</p>
-                            <div class="mt-4 space-x-3">
-                                <a href="#" class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-all">عرض</a>
-                                <a href="#" download class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-all">تحميل</a>
-                            </div>
-                        </div>
-                        <div class="flex flex-col space-y-2">
-                            <button onclick="editAnnouncement()" class="px-4 py-2 bg-green-700 text-white rounded-lg hover:bg-green-800 flex items-center gap-2 transition-all">تعديل
-                                <img src="../icons/add-document.svg" class="w-5 filter invert"> 
-                            </button>
-                            <button class="px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 flex items-center gap-2 transition-all">حذف
-                                <img src="../icons/trash.svg" class="w-5 filter invert"> 
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-        
-                <!-- =========================================================================================================================
-                =========================================  اضافه للكود اعلاه النافذه المخفيه زر تعديل محاضرة =============================================================== -->
-                <!-- الخلفية المعتمة -->
-                <div id="editAnnouncement" class="fixed inset-0 bg-black bg-opacity-50 hidden flex justify-center items-center">
-                    <!-- النافذة المنبثقة -->
-                    <div class="bg-gradient-to-r from-green-500 to-green-800 text-white p-6 rounded-lg shadow-lg w-96">
-                        <h2 class="text-xl font-bold mb-4 text-center">تعديل الإعلان  </h2>
-                        
-                        <!-- إدخال أسم المحاضرة -->
-                        <label class="block font-semibold">   عنوان الاعلان:</label>
-                        <input type="text" class="w-full p-2 border rounded mb-4 focus:outline-none focus:ring-2 focus:ring-green-700" placeholder="أدخل  العنوان  ">
-                        <!-- إدخال رابط الفيديو -->
-                        <label class="block font-semibold">رابط الزوم(Zoom):</label>
-                        <input type="text" class=" w-full p-2 border rounded mb-4 focus:outline-none focus:ring-2 focus:ring-green-700" placeholder="أدخل الرابط ">
-                        
-                        <!-- رفع ملف الفيديو -->
-                        <label class="block font-semibold">رفع ملف للاعلان:</label>
-                        <input type="file" class="w-full p-2 border rounded mb-4 bg-white text-black" accept="video/*">
-                        
-        
-                        
-                        <!-- أزرار -->
-                        <div class="flex justify-between mt-4">
-                            <button onclick="closeAnnouncement()" class=" bg-red-600  hover:bg-red-700 text-white px-4 py-2 rounded">إلغاء</button>
-                            <button class=" bg-gray-200  hover:bg-gray-300 text-black px-4 py-2 rounded"> تعديل</button>
-                        </div>
-                    </div>
-                </div>
-                <script>
-                    function editAnnouncement() {
-                        document.getElementById("editAnnouncement").classList.remove("hidden");
-                    }
-                    function closeAnnouncement() {
-                        document.getElementById("editAnnouncement").classList.add("hidden");
-                    }
-                </script>
+                    <!-- ===== أكواد جافاسكربت لإضافة مادة جديدة =====  -->
+                    <script>
+                        function openFormAddCorse() {
+                            document.getElementById("subjectForm").classList.remove("hidden");
+                        }
+                        function closeFormAddCorse() {
+                            document.getElementById("subjectForm").classList.add("hidden");
+                        }
+                    </script>
+            </div> 
+
+
         </div>
     </div>
 

@@ -34,7 +34,7 @@
                         المستخدمون <span>▼</span>
                     </button>
                     <ul id="usersMenu" class=" pl-4 ">
-                        <li onclick="setActive(this)" class="menu-item w-full h-8 px-6  hover:bg-green-500 rounded-xl flex items-center">
+                        <li onclick="setActive(this)" class="menu-item w-full h-8 px-6 bg-green-800 hover:bg-green-500 rounded-xl flex items-center">
                             <img src="../icons/student.svg" alt="User Icon" class="w-6 h-5 ml-2 filter invert">
                             <a  href="studentTabul.html" class=" w-full h-full flex items-center">الطلاب</a>
                         </li>
@@ -55,8 +55,8 @@
                     </button>
                 </li>
                 <li>
-                    <button onclick="setActive(this)" class="menu-item w-full h-12 px-4 text-right flex justify-between items-center bg-green-800 hover:bg-green-500 rounded-xl">
-                        <a href="#" class="  w-full h-full flex items-center">الإعلانات</a>
+                    <button onclick="setActive(this)" class="menu-item w-full h-12 px-4 text-right flex justify-between items-center  hover:bg-green-500 rounded-xl">
+                        <a href="Display Announcements.html" class="  w-full h-full flex items-center">الإعلانات</a>
                     </button>
                 </li>
             </ul>
@@ -72,121 +72,62 @@
 
         <!-- Main Content -->
         <div class="flex-1 p-6">
-            <h1 class="text-3xl  mb-6 font-semibold text-gray-700">لوحة التحكم</h1>
-            <hr class="">
-            <h3 class="text-xl  my-2 font-semibold text-gray-600">أدارةالاعلانات</h3>
-            <div class="flex justify-center items-center mt-20">
-                <div class="w-full max-w-2xl p-6 bg-gradient-to-r from-green-400 to-green-800   rounded-xl shadow-lg shadow-black/50">
-                    <h2 class="text-3xl font-bold text-center text-white mb-6">الإعلانات</h2>
-                    <div class="flex justify-end">
-                        <button  class=" bg-gradient-to-r from-green-600 to-green-800   text-white px-4 py-2 rounded mb-4 hover:bg-gradient-to-r hover:from-green-700 hover:to-green-900 ">
-                            <a href="Announcements.html" class="  w-full h-full flex items-center">+ إضافة إعلان</a>
+            <h1 class="text-3xl mb-6 font-semibold text-gray-700">لوحة التحكم</h1>
+            <hr>
+            <h3 class="text-xl my-2 font-semibold text-gray-600">تفاصيل الطالب</h3>
+            <div class="container mx-auto p-6 w-1/2 bg-gradient-to-r from-green-500 to-green-800 shadow-lg rounded-lg my-20">        
+                
+                <h2 class="text-lg text-white font-semibold mb-2 text-right">الاسم: عبدالله أحمد باحشوان</h2>
+                <p class="text-white mb-2 text-right">الرقم الجامعي: 2021001</p>
+                <p class="text-white mb-2 text-right">القسم: علوم الحاسوب</p>
+                <p class="text-white mb-2 text-right">الحالة: <span class="text-green-300">نشط</span></p>
+        
+                <div class="flex justify-end gap-4 mt-4">
+                    <button id="editButton" class="bg-green-700 hover:bg-green-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                        تعديل
+                    </button>
+                    <form action="/delete-student" method="POST" class="inline-block">
+                        <input type="hidden" name="_method" value="DELETE">
+                        <input type="hidden" name="student_id" value="2021001">
+                        <button type="submit" class="bg-red-700 hover:bg-red-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                            حذف
                         </button>
-                    </div>
-        
-                    
-                    <!-- إعلان واحد -->
-                    <div class="bg-green-50  p-5 rounded-lg shadow-md flex items-center justify-between hover:shadow-lg transition-all duration-300 mb-4">
-                        <div>
-                            <h3 class="text-xl font-semibold text-green-800">عنوان الإعلان</h3>
-                            <p class="text-gray-500 text-sm mt-1">تم النشر في: 2023-10-03 12:00</p>
-                            <div class="mt-4 space-x-3">
-                                <a href="#" class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-all">عرض</a>
-                                <a href="#" download class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-all">تحميل</a>
+                    </form>
+                </div>
+                
+                <!-- نموذج التعديل (مخفي افتراضيًا) -->
+                <div id="editForm" class="hidden mt-10">
+                    <div class="flex items-center justify-center font-semibold">
+                        <div class="p-6 w-full">
+                            <h2 class="text-xl font-bold text-white mb-4">تعديل بيانات الطالب</h2>
+                            <input type="text" placeholder="الاسم الكامل" class="w-full mb-2 p-2 border rounded">
+                            <input type="text" placeholder="الرقم الجامعي" class="w-full mb-2 p-2 border rounded">
+                            <input type="text" placeholder="القسم" class="w-full mb-2 p-2 border rounded">
+                            <select class="w-full mb-2 p-2 border rounded">
+                                <option value="نشط">نشط</option>
+                                <option value="موقوف">موقوف</option>
+                            </select>
+                            <div class="flex justify-between">
+                                <button class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">حفظ</button>
+                                <button id="cancelEditButton" class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">إلغاء</button>
                             </div>
-                        </div>
-                        <div class="flex flex-col space-y-2">
-                            <button onclick="editAnnouncement()" class="px-4 py-2 bg-green-700 text-white rounded-lg hover:bg-green-800 flex items-center gap-2 transition-all">تعديل
-                                <img src="../icons/add-document.svg" class="w-5 filter invert"> 
-                            </button>
-                            <button class="px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 flex items-center gap-2 transition-all">حذف
-                                <img src="../icons/trash.svg" class="w-5 filter invert"> 
-                            </button>
-                        </div>
-                    </div>
-        
-                    <!-- إعلان ثاني -->
-                    <div class="bg-green-50  p-5 rounded-lg shadow-md flex items-center justify-between hover:shadow-lg transition-all duration-300 mb-4">
-                        <div>
-                            <h3 class="text-xl font-semibold text-green-800">عنوان الإعلان</h3>
-                            <p class="text-gray-500 text-sm mt-1">تم النشر في: 2023-10-03 12:00</p>
-                            <div class="mt-4 space-x-3">
-                                <a href="#" class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-all">عرض</a>
-                                <a href="#" download class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-all">تحميل</a>
-                            </div>
-                        </div>
-                        <div class="flex flex-col space-y-2">
-                            <button onclick="editAnnouncement()" class="px-4 py-2 bg-green-700 text-white rounded-lg hover:bg-green-800 flex items-center gap-2 transition-all">تعديل
-                                <img src="../icons/add-document.svg" class="w-5 filter invert"> 
-                            </button>
-                            <button class="px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 flex items-center gap-2 transition-all">حذف
-                                <img src="../icons/trash.svg" class="w-5 filter invert"> 
-                            </button>
-                        </div>
-                    </div>
-        
-                    <!-- إعلان ثالث -->
-                    <div class="bg-green-50  p-5 rounded-lg shadow-md flex items-center justify-between hover:shadow-lg transition-all duration-300 mb-4">
-                        <div>
-                            <h3 class="text-xl font-semibold text-green-800">عنوان الإعلان</h3>
-                            <p class="text-gray-500 text-sm mt-1">تم النشر في: 2023-10-03 12:00</p>
-                            <div class="mt-4 space-x-3">
-                                <a href="#" class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-all">عرض</a>
-                                <a href="#" download class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-all">تحميل</a>
-                            </div>
-                        </div>
-                        <div class="flex flex-col space-y-2">
-                            <button onclick="editAnnouncement()" class="px-4 py-2 bg-green-700 text-white rounded-lg hover:bg-green-800 flex items-center gap-2 transition-all">تعديل
-                                <img src="../icons/add-document.svg" class="w-5 filter invert"> 
-                            </button>
-                            <button class="px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 flex items-center gap-2 transition-all">حذف
-                                <img src="../icons/trash.svg" class="w-5 filter invert"> 
-                            </button>
                         </div>
                     </div>
                 </div>
             </div>
-            
         
-                <!-- =========================================================================================================================
-                =========================================  اضافه للكود اعلاه النافذه المخفيه زر تعديل محاضرة =============================================================== -->
-                <!-- الخلفية المعتمة -->
-                <div id="editAnnouncement" class="fixed inset-0 bg-black bg-opacity-50 hidden flex justify-center items-center">
-                    <!-- النافذة المنبثقة -->
-                    <div class="bg-gradient-to-r from-green-500 to-green-800 text-white p-6 rounded-lg shadow-lg w-96">
-                        <h2 class="text-xl font-bold mb-4 text-center">تعديل الإعلان  </h2>
-                        
-                        <!-- إدخال أسم المحاضرة -->
-                        <label class="block font-semibold">   عنوان الاعلان:</label>
-                        <input type="text" class="w-full p-2 border rounded mb-4 focus:outline-none focus:ring-2 focus:ring-green-700" placeholder="أدخل  العنوان  ">
-                        <!-- إدخال رابط الفيديو -->
-                        <label class="block font-semibold">رابط الزوم(Zoom):</label>
-                        <input type="text" class=" w-full p-2 border rounded mb-4 focus:outline-none focus:ring-2 focus:ring-green-700" placeholder="أدخل الرابط ">
-                        
-                        <!-- رفع ملف الفيديو -->
-                        <label class="block font-semibold">رفع ملف للاعلان:</label>
-                        <input type="file" class="w-full p-2 border rounded mb-4 bg-white text-black" accept="video/*">
-                        
+            <script>
+                // إظهار وإخفاء نموذج التعديل
+                document.getElementById('editButton').onclick = function() {
+                    document.getElementById('editForm').classList.toggle('hidden');
+                };
         
-                        
-                        <!-- أزرار -->
-                        <div class="flex justify-between mt-4">
-                            <button onclick="closeAnnouncement()" class=" bg-red-600  hover:bg-red-700 text-white px-4 py-2 rounded">إلغاء</button>
-                            <button class=" bg-gray-200  hover:bg-gray-300 text-black px-4 py-2 rounded"> تعديل</button>
-                        </div>
-                    </div>
-                </div>
-                <script>
-                    function editAnnouncement() {
-                        document.getElementById("editAnnouncement").classList.remove("hidden");
-                    }
-                    function closeAnnouncement() {
-                        document.getElementById("editAnnouncement").classList.add("hidden");
-                    }
-                </script>
+                document.getElementById('cancelEditButton').onclick = function() {
+                    document.getElementById('editForm').classList.add('hidden');
+                };
+            </script>
         </div>
     </div>
-
     <footer
     class="bg-zinc-50 text-center text-surface/75 dark:bg-neutral-700 dark:text-white/75 lg:text-left ">
     <div
