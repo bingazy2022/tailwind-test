@@ -131,19 +131,22 @@
                     </div>
                     
                     <!-- نموذج إضافة مادة جديدة (مخفي بشكل افتراضي)  -->
-                    <div id="subjectForm" class="hidden fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 font-semibold">
-                        <div class="bg-gradient-to-b from-green-500 to-green-800 p-6 rounded-lg shadow-md w-96">
-                            <h2 class="text-xl font-bold text-white mb-4">إضافة مادة جديدة</h2>
-                            <input type="text" placeholder="رمز المادة" class="w-full mb-2 p-2 border rounded ">
-                            <input type="text" placeholder="اسم المادة" class="w-full mb-2 p-2 border rounded">
-                            <input type="text" placeholder="القسم" class="w-full mb-2 p-2 border rounded">
-                            <input type="number" placeholder="عدد الساعات" class="w-full mb-2 p-2 border rounded">
-                            <div class="flex justify-between">
-                                <button class="bg-gray-200 text-black px-4 py-2 rounded hover:bg-gray-400 ">حفظ</button>
-                                <button class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700" onclick="closeFormAddCorse()">إلغاء</button>
+                    <div id="subjectForm" class="hidden">
+                        <div id="subjectForm" class=" fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 font-semibold">
+                            <div class="bg-gradient-to-b from-green-500 to-green-800 p-6 rounded-lg shadow-md w-96">
+                                <h2 class="text-xl font-bold text-white mb-4">إضافة مادة جديدة</h2>
+                                <input type="text" placeholder="رمز المادة" class="w-full mb-2 p-2 border rounded ">
+                                <input type="text" placeholder="اسم المادة" class="w-full mb-2 p-2 border rounded">
+                                <input type="text" placeholder="القسم" class="w-full mb-2 p-2 border rounded">
+                                <input type="number" placeholder="عدد الساعات" class="w-full mb-2 p-2 border rounded">
+                                <div class="flex justify-between">
+                                    <button class="bg-gray-200 text-black px-4 py-2 rounded hover:bg-gray-400 ">حفظ</button>
+                                    <button class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700" onclick="closeFormAddCorse()">إلغاء</button>
+                                </div>
                             </div>
                         </div>
                     </div>
+
                     <!-- ===== أكواد جافاسكربت لإضافة مادة جديدة =====  -->
                     <script>
                         function openFormAddCorse() {

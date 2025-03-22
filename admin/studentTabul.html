@@ -154,22 +154,25 @@
                     </div>
                     
                     <!-- نموذج إضافة طالب جديد (مخفي بشكل افتراضي) -->
-                    <div id="studentForm" class="hidden fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 font-semibold">
-                        <div class="bg-gradient-to-b from-green-500 to-green-800 p-6 rounded-lg shadow-md w-96">
-                            <h2 class="text-xl font-bold text-white mb-4">إضافة طالب جديد</h2>
-                            <input type="text" placeholder="الرقم الجامعي" class="w-full mb-2 p-2 border rounded ">
-                            <input type="text" placeholder="الاسم الكامل" class="w-full mb-2 p-2 border rounded">
-                            <input type="text" placeholder="القسم" class="w-full mb-2 p-2 border rounded">
-                            <select class="w-full mb-2 p-2 border rounded">
-                                <option value="نشط">نشط</option>
-                                <option value="موقوف">موقوف</option>
-                            </select>
-                            <div class="flex justify-between">
-                                <button class="bg-gray-200 text-black px-4 py-2 rounded hover:bg-gray-400 ">حفظ</button>
-                                <button class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700" onclick="closeFormAddstudent()">إلغاء</button>
+                    <div id="studentForm" class="hidden">
+                        <div id="studentForm" class=" fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 font-semibold">
+                            <div class="bg-gradient-to-b from-green-500 to-green-800 p-6 rounded-lg shadow-md w-96">
+                                <h2 class="text-xl font-bold text-white mb-4">إضافة طالب جديد</h2>
+                                <input type="text" placeholder="الرقم الجامعي" class="w-full mb-2 p-2 border rounded ">
+                                <input type="text" placeholder="الاسم الكامل" class="w-full mb-2 p-2 border rounded">
+                                <input type="text" placeholder="القسم" class="w-full mb-2 p-2 border rounded">
+                                <select class="w-full mb-2 p-2 border rounded">
+                                    <option value="نشط">نشط</option>
+                                    <option value="موقوف">موقوف</option>
+                                </select>
+                                <div class="flex justify-between">
+                                    <button class="bg-gray-200 text-black px-4 py-2 rounded hover:bg-gray-400 ">حفظ</button>
+                                    <button class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700" onclick="closeFormAddstudent()">إلغاء</button>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    
                     <!-- =====اكواد جافاسكربت لاضافه طالب جديد ===== -->
                     <script>
                         function openFormAddstudent() {

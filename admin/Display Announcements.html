@@ -151,28 +151,30 @@
                 <!-- =========================================================================================================================
                 =========================================  اضافه للكود اعلاه النافذه المخفيه زر تعديل محاضرة =============================================================== -->
                 <!-- الخلفية المعتمة -->
-                <div id="editAnnouncement" class="fixed inset-0 bg-black bg-opacity-50 hidden flex justify-center items-center">
-                    <!-- النافذة المنبثقة -->
-                    <div class="bg-gradient-to-r from-green-500 to-green-800 text-white p-6 rounded-lg shadow-lg w-96">
-                        <h2 class="text-xl font-bold mb-4 text-center">تعديل الإعلان  </h2>
-                        
-                        <!-- إدخال أسم المحاضرة -->
-                        <label class="block font-semibold">   عنوان الاعلان:</label>
-                        <input type="text" class="w-full p-2 border rounded mb-4 focus:outline-none focus:ring-2 focus:ring-green-700" placeholder="أدخل  العنوان  ">
-                        <!-- إدخال رابط الفيديو -->
-                        <label class="block font-semibold">رابط الزوم(Zoom):</label>
-                        <input type="text" class=" w-full p-2 border rounded mb-4 focus:outline-none focus:ring-2 focus:ring-green-700" placeholder="أدخل الرابط ">
-                        
-                        <!-- رفع ملف الفيديو -->
-                        <label class="block font-semibold">رفع ملف للاعلان:</label>
-                        <input type="file" class="w-full p-2 border rounded mb-4 bg-white text-black" accept="video/*">
-                        
-        
-                        
-                        <!-- أزرار -->
-                        <div class="flex justify-between mt-4">
-                            <button onclick="closeAnnouncement()" class=" bg-red-600  hover:bg-red-700 text-white px-4 py-2 rounded">إلغاء</button>
-                            <button class=" bg-gray-200  hover:bg-gray-300 text-black px-4 py-2 rounded"> تعديل</button>
+                <div id="editAnnouncement" class=" hidden ">
+                    <div class="fixed inset-0 bg-black bg-opacity-50  flex justify-center items-center">
+                        <!-- النافذة المنبثقة -->
+                        <div class="bg-gradient-to-r from-green-500 to-green-800 text-white p-6 rounded-lg shadow-lg w-96">
+                            <h2 class="text-xl font-bold mb-4 text-center">تعديل الإعلان  </h2>
+                            
+                            <!-- إدخال أسم المحاضرة -->
+                            <label class="block font-semibold">   عنوان الاعلان:</label>
+                            <input type="text" class="w-full p-2 border rounded mb-4 focus:outline-none focus:ring-2 focus:ring-green-700" placeholder="أدخل  العنوان  ">
+                            <!-- إدخال رابط الفيديو -->
+                            <label class="block font-semibold">رابط الزوم(Zoom):</label>
+                            <input type="text" class=" w-full p-2 border rounded mb-4 focus:outline-none focus:ring-2 focus:ring-green-700" placeholder="أدخل الرابط ">
+                            
+                            <!-- رفع ملف الفيديو -->
+                            <label class="block font-semibold">رفع ملف للاعلان:</label>
+                            <input type="file" class="w-full p-2 border rounded mb-4 bg-white text-black" accept="video/*">
+                            
+            
+                            
+                            <!-- أزرار -->
+                            <div class="flex justify-between mt-4">
+                                <button onclick="closeAnnouncement()" class=" bg-red-600  hover:bg-red-700 text-white px-4 py-2 rounded">إلغاء</button>
+                                <button class=" bg-gray-200  hover:bg-gray-300 text-black px-4 py-2 rounded"> تعديل</button>
+                            </div>
                         </div>
                     </div>
                 </div>
