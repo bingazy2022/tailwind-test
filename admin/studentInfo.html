@@ -45,6 +45,11 @@
                     </ul>
                 </li>
                 <li>
+                    <button onclick="setActive(this)" class="menu-item w-full h-12 px-4 text-right flex justify-between items-center hover:bg-green-500 rounded-xl">
+                        <a href="colleges.html" class=" w-full h-full flex items-center">الكليات</a>
+                    </button>
+                </li>
+                <li>
                     <button onclick="setActive(this)" class="menu-item w-full h-12 px-4 text-right flex justify-between items-center   hover:bg-green-500 rounded-xl">
                         <a href="deparyments.html" class="  w-full h-full flex items-center">الأقسام</a>
                     </button>
@@ -80,7 +85,9 @@
                 <h2 class="text-lg text-white font-semibold mb-2 text-right">الاسم: عبدالله أحمد باحشوان</h2>
                 <p class="text-white mb-2 text-right">الرقم الجامعي: 2021001</p>
                 <p class="text-white mb-2 text-right">القسم: علوم الحاسوب</p>
-                <p class="text-white mb-2 text-right">الحالة: <span class="text-green-300">نشط</span></p>
+                <p class="text-white mb-2 text-right">المستوى: <span >الأول</span></p>
+                <p class="text-white mb-2 text-right">البريدالاكتروني:  abdullah@gmail.com</p>
+                <p class="text-white mb-2 text-right">كلمة المرور:  123@asd</p>
         
                 <div class="flex justify-end gap-4 mt-4">
                     <button id="editButton" class="bg-green-700 hover:bg-green-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
@@ -102,11 +109,31 @@
                             <h2 class="text-xl font-bold text-white mb-4">تعديل بيانات الطالب</h2>
                             <input type="text" placeholder="الاسم الكامل" class="w-full mb-2 p-2 border rounded">
                             <input type="text" placeholder="الرقم الجامعي" class="w-full mb-2 p-2 border rounded">
-                            <input type="text" placeholder="القسم" class="w-full mb-2 p-2 border rounded">
                             <select class="w-full mb-2 p-2 border rounded">
-                                <option value="نشط">نشط</option>
-                                <option value="موقوف">موقوف</option>
+                                <option value="تقنية معلومات">تقنية معلومات</option>
+                                <option value="محاسبة">محاسبة</option>
+                                <option value="هندسة شبكات">هندسة شبكات</option>
+                                <option value="هندسة بتروليه">هندسة بتروليه</option>
                             </select>
+                            <select class="w-full mb-2 p-2 border rounded">
+                                <option value="المستوى الأولى">المستوى الأولى</option>
+                                <option value=" المستوى الثاني">المستوى الثاني</option>
+                                <option value=" المستوى الثالث">المستوى الثالث</option>
+                                <option value=" المستوى الرابع">المستوى الرابع</option>
+                            </select>
+                            <input type="email"  placeholder="البريد الاكتروني" class="w-full mb-2 p-2 border rounded">
+                            <div class="relative ">
+                                <input type="password" placeholder="كلمة المرور" class="w-full mb-2 p-2 border rounded">
+                                <button type="button" class="absolute  top-2 toggle-password right-auto left-2">
+                                    <img src="../icons/hidden.png" alt="إظهار" class="w-6 ">
+                                </button>
+                            </div>
+                            <div class="relative mb-4">
+                                <input type="password" placeholder="تأكيد كلمة المرور" class="w-full mb-2 p-2 border rounded">
+                                <button type="button" class="absolute  top-2 toggle-password right-auto left-2">
+                                    <img src="../icons/hidden.png" alt="إظهار" class="w-6 ">
+                                </button>
+                            </div>
                             <div class="flex justify-between">
                                 <button class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">حفظ</button>
                                 <button id="cancelEditButton" class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">إلغاء</button>
@@ -126,6 +153,24 @@
                     document.getElementById('editForm').classList.add('hidden');
                 };
             </script>
+    <!-- =================================================================================================
+    =============تابع لتغيير كلمه المرور جافاسكربت====================================== -->
+<script>
+    document.querySelectorAll(".toggle-password").forEach(button => {
+        button.addEventListener("click", function () {
+            let input = this.previousElementSibling;
+            let img = this.querySelector("img");
+
+            if (input.type === "password") {
+                input.type = "text";
+                img.src = "../icons/eye.png"; // تغيير الأيقونة إلى مفتوحة
+            } else {
+                input.type = "password";
+                img.src = "../icons/hidden.png"; // تغيير الأيقونة إلى مغلقة
+            }
+        });
+    });
+</script>
         </div>
     </div>
     <footer

@@ -46,6 +46,11 @@
                 </li>
                 <li>
                     <button onclick="setActive(this)" class="menu-item w-full h-12 px-4 text-right flex justify-between items-center hover:bg-green-500 rounded-xl">
+                        <a href="colleges.html" class=" w-full h-full flex items-center">الكليات</a>
+                    </button>
+                </li>
+                <li>
+                    <button onclick="setActive(this)" class="menu-item w-full h-12 px-4 text-right flex justify-between items-center hover:bg-green-500 rounded-xl">
                         <a href="deparyments.html" class=" w-full h-full flex items-center">الأقسام</a>
                     </button>
                 </li>
@@ -56,7 +61,7 @@
                 </li>
                 <li>
                     <button onclick="setActive(this)" class="menu-item w-full h-12 px-4 text-right flex justify-between items-center hover:bg-green-500 rounded-xl">
-                        <a href="#" class=" w-full h-full flex items-center">الإعلانات</a>
+                        <a href="Display Announcements.html" class=" w-full h-full flex items-center">الإعلانات</a>
                     </button>
                 </li>
             </ul>
@@ -123,253 +128,13 @@
                     <p class="text-xl mt-2">1,200</p>
                     <p class="text-xs text-gray-300 mt-2">10%+أعلان منذ السنة الماضية</p>
                 </div>
-
             </div>
-            <hr class="mt-12">
-            <div class="w-1/3 mx-auto">
-                <img src="../image/شعار_الجامعة_صورة.png" alt="User Icon" class="w-full h-full ml-2  ">
-            </div>
-            <!-- ======جدول الطلاب ======== -->
-            <!-- <div id="addStudent" class="  py-8 font-semibold ">
-                    <div class="container mx-auto  px-6 rounded-lg ">
-                        <h2 class="text-2xl font-semibold mb-4 text-gray-700">إدارة الطلاب</h2>
-                        
-                        <!-- زر إضافة طالب جديد  
-                        <button class="mb-4 bg-green-700 text-white px-4 py-2 rounded hover:bg-green-800" onclick="openFormAddstudent()">+ إضافة طالب جديد</button>
-                        
-                        <!-- جدول عرض الطلاب  
-                        <table class="w-full bg-white border rounded-lg shadow-md">
-                            <thead class="bg-gray-200">
-                                <tr>
-                                    <th class="p-2 border">الرقم الجامعي</th>
-                                    <th class="p-2 border">الاسم</th>
-                                    <th class="p-2 border">القسم</th>
-                                    <th class="p-2 border">الحالة</th>
-                                    <th class="p-2 border">الإجراء</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="text-center">
-                                    <td class="p-2 border">2021001</td>
-                                    <td class="p-2 border"> أحمد عمر عصبان</td>
-                                    <td class="p-2 border">علوم الحاسوب</td>
-                                    <td class="p-2 border text-green-600">نشط</td>
-                                    <td class="p-2 border">
-                                        <button class="bg-green-700 text-white px-2 py-1 rounded hover:bg-green-800">تعديل</button>
-                                        <button class="bg-red-600 text-white px-2 py-1 rounded hover:bg-red-700">حذف</button>
-                                    </td>
-                                </tr>
-                                <tr class="text-center">
-                                    <td class="p-2 border">2021002</td>
-                                    <td class="p-2 border"> عبدالله أحمد باحشوان</td>
-                                    <td class="p-2 border">الهندسة بتروليه</td>
-                                    <td class="p-2 border text-green-600">نشط</td>
-                                    <td class="p-2 border">
-                                        <button class="bg-green-700 text-white px-2 py-1 rounded hover:bg-green-800">تعديل</button>
-                                        <button class="bg-red-600 text-white px-2 py-1 rounded hover:bg-red-700">حذف</button>
-                                    </td>
-                                </tr>
-                                <tr class="text-center">
-                                    <td class="p-2 border">2021003</td>
-                                    <td class="p-2 border">علي خالد باكرشوم</td>
-                                    <td class="p-2 border"> تقنية معلومات</td>
-                                    <td class="p-2 border text-red-600">موقوف</td>
-                                    <td class="p-2 border">
-                                        <button class="bg-green-700 text-white px-2 py-1 rounded hover:bg-green-800">تعديل</button>
-                                        <button class="bg-red-600 text-white px-2 py-1 rounded hover:bg-red-700">حذف</button>
-                                    </td>
-                                </tr>
-                                <tr class="text-center">
-                                    <td class="p-2 border">2021004</td>
-                                    <td class="p-2 border"> عبدالرحمن فهمي صبيح</td>
-                                    <td class="p-2 border"> هندسة شبكات</td>
-                                    <td class="p-2 border text-red-600">موقوف</td>
-                                    <td class="p-2 border">
-                                        <button class="bg-green-700 text-white px-2 py-1 rounded hover:bg-green-800">تعديل</button>
-                                        <button class="bg-red-600 text-white px-2 py-1 rounded hover:bg-red-700">حذف</button>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    
-                    <!-- نموذج إضافة طالب جديد (مخفي بشكل افتراضي)  
-                    <div id="studentForm" class="hidden fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 font-semibold">
-                        <div class="bg-gradient-to-b from-green-500 to-green-800 p-6 rounded-lg shadow-md w-96">
-                            <h2 class="text-xl font-bold text-white mb-4">إضافة طالب جديد</h2>
-                            <input type="text" placeholder="الرقم الجامعي" class="w-full mb-2 p-2 border rounded ">
-                            <input type="text" placeholder="الاسم الكامل" class="w-full mb-2 p-2 border rounded">
-                            <input type="text" placeholder="القسم" class="w-full mb-2 p-2 border rounded">
-                            <select class="w-full mb-2 p-2 border rounded">
-                                <option value="نشط">نشط</option>
-                                <option value="موقوف">موقوف</option>
-                            </select>
-                            <div class="flex justify-between">
-                                <button class="bg-gray-200 text-black px-4 py-2 rounded hover:bg-gray-400 ">حفظ</button>
-                                <button class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700" onclick="closeFormAddstudent()">إلغاء</button>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- =====اكواد جافاسكربت لاضافه طالب جديد ===== 
-                    <script>
-                        function openFormAddstudent() {
-                            document.getElementById("studentForm").classList.remove("hidden");
-                        }
-                        function closeFormAddstudent() {
-                            document.getElementById("studentForm").classList.add("hidden");
-                        }
-                    </script>
-
-
-
-            </div> -->
-
-<!-- ====== جدول المعلمين ======== -->
-<!-- <div id="addTeacher" class=" py-8 font-semibold">
-    <div class="container mx-auto px-6 rounded-lg">
-        <h2 class="text-2xl font-semibold mb-4 text-gray-700">إدارة المعلمين</h2>
-        
-                        <div class="mb-4 flex justify-between items-center">
-                            <!-- زر إضافة معلم جديد 
-                            <button class=" bg-green-700 text-white px-4 py-2 rounded hover:bg-green-800" onclick="openFormAddstudent()">+ إضافة معلم جديد</button>
-                            <!-- زر البحث 
-                            <input type="search" placeholder="بحث..." class=" w-56 p-2 pr-14 rounded-full border bg-slate-100   focus:outline-none ">
-                            <button type="submit" class="absolute  bg-green-700 hover:bg-green-800 text-white rounded-full left-0 right-auto py-2 px-6 ml-56">بحث</button>
-                        </div>
-        
-        <!-- جدول عرض المعلمين  
-        <table class="w-full bg-white border rounded-lg shadow-md ">
-            <thead class="bg-gray-200">
-                <tr>
-                    <th class="p-2 border">رقم الموظف</th>
-                    <th class="p-2 border">الاسم</th>
-                    <th class="p-2 border">التخصص</th>
-                    <th class="p-2 border">الحالة</th>
-                    <th class="p-2 border">الإجراء</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr class="text-center">
-                    <td class="p-2 border">T001</td>
-                    <td class="p-2 border">محمد عبد الرحمن</td>
-                    <td class="p-2 border">رياضيات</td>
-                    <td class="p-2 border text-green-600">نشط</td>
-                    <td class="p-2 border">
-                        <button class="bg-green-700 text-white px-2 py-1 rounded hover:bg-green-800">تعديل</button>
-                        <button class="bg-red-600 text-white px-2 py-1 rounded hover:bg-red-700">حذف</button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    
-    <!-- نموذج إضافة معلم جديد  
-    <div id="teacherForm" class="hidden fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 font-semibold">
-        <div class="bg-gradient-to-b from-green-500 to-green-800 p-6 rounded-lg shadow-md w-96">
-            <h2 class="text-xl font-bold text-white mb-4">إضافة معلم جديد</h2>
-            <input type="text" placeholder="رقم الموظف" class="w-full mb-2 p-2 border rounded">
-            <input type="text" placeholder="الاسم الكامل" class="w-full mb-2 p-2 border rounded">
-            <input type="text" placeholder="التخصص" class="w-full mb-2 p-2 border rounded">
-            <select class="w-full mb-2 p-2 border rounded">
-                <option value="نشط">نشط</option>
-                <option value="موقوف">موقوف</option>
-            </select>
-            <div class="flex justify-between">
-                <button class="bg-gray-200 text-black px-4 py-2 rounded hover:bg-gray-400">حفظ</button>
-                <button class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700" onclick="closeFormAddTeacher()">إلغاء</button>
-            </div>
+                <hr class="mt-12">
+                <div class="w-1/3 mx-auto">
+                    <img src="../image/شعار_الجامعة_صورة.png" alt="User Icon" class="w-full h-full ml-2  ">
+                </div>
         </div>
     </div>
-
-
-    <!-- أكواد جافاسكريبت لاضافة معلم جديد 
-    <script>
-        function openFormAddTeacher() {
-            document.getElementById("teacherForm").classList.remove("hidden");
-        }
-        function closeFormAddTeacher() {
-            document.getElementById("teacherForm").classList.add("hidden");
-        }
-
-    </script>
-</div> -->
-
-                <!-- ====== جدول المواد الدراسية ======== -->
-                <!-- <div id="addSubject" class=" py-8 font-semibold ">
-                    <div class="container mx-auto px-6 rounded-lg ">
-                        <h2 class="text-2xl font-semibold mb-4 text-gray-700">إدارة المواد الدراسية</h2>
-                        
-                        <div class="mb-4 flex justify-between items-center">
-                            <!-- زر إضافة طالب جديد  
-                            <button class=" bg-green-700 text-white px-4 py-2 rounded hover:bg-green-800" onclick="openFormAddstudent()">+ إضافة مادة جديدة</button>
-                            <!-- زر البحث  
-                            <input type="search" placeholder="بحث..." class=" w-56 p-2 pr-14 rounded-full border bg-slate-100   focus:outline-none ">
-                            <button type="submit" class="absolute  bg-green-700 hover:bg-green-800 text-white rounded-full left-0 right-auto py-2 px-6 ml-56">بحث</button>
-                        </div>
-                        
-                        <!-- جدول عرض المواد  
-                        <table class="w-full bg-white border rounded-lg shadow-md">
-                            <thead class="bg-gray-200">
-                                <tr>
-                                    <th class="p-2 border">رمز المادة</th>
-                                    <th class="p-2 border">اسم المادة</th>
-                                    <th class="p-2 border">القسم</th>
-                                    <th class="p-2 border">الساعات</th>
-                                    <th class="p-2 border">الإجراء</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="text-center">
-                                    <td class="p-2 border">CS101</td>
-                                    <td class="p-2 border">مقدمة في علوم الحاسوب</td>
-                                    <td class="p-2 border">علوم الحاسوب</td>
-                                    <td class="p-2 border">3</td>
-                                    <td class="p-2 border">
-                                        <button class="bg-green-700 text-white px-2 py-1 rounded hover:bg-green-800">تعديل</button>
-                                        <button class="bg-red-600 text-white px-2 py-1 rounded hover:bg-red-700">حذف</button>
-                                    </td>
-                                </tr>
-                                <tr class="text-center">
-                                    <td class="p-2 border">ENG201</td>
-                                    <td class="p-2 border">اللغة الإنجليزية</td>
-                                    <td class="p-2 border">العلوم الإنسانية</td>
-                                    <td class="p-2 border">2</td>
-                                    <td class="p-2 border">
-                                        <button class="bg-green-700 text-white px-2 py-1 rounded hover:bg-green-800">تعديل</button>
-                                        <button class="bg-red-600 text-white px-2 py-1 rounded hover:bg-red-700">حذف</button>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    
-                    <!-- نموذج إضافة مادة جديدة (مخفي بشكل افتراضي)  
-                    <div id="subjectForm" class="hidden fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 font-semibold">
-                        <div class="bg-gradient-to-b from-green-500 to-green-800 p-6 rounded-lg shadow-md w-96">
-                            <h2 class="text-xl font-bold text-white mb-4">إضافة مادة جديدة</h2>
-                            <input type="text" placeholder="رمز المادة" class="w-full mb-2 p-2 border rounded ">
-                            <input type="text" placeholder="اسم المادة" class="w-full mb-2 p-2 border rounded">
-                            <input type="text" placeholder="القسم" class="w-full mb-2 p-2 border rounded">
-                            <input type="number" placeholder="عدد الساعات" class="w-full mb-2 p-2 border rounded">
-                            <div class="flex justify-between">
-                                <button class="bg-gray-200 text-black px-4 py-2 rounded hover:bg-gray-400 ">حفظ</button>
-                                <button class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700" onclick="closeFormAddCorse()">إلغاء</button>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- ===== أكواد جافاسكربت لإضافة مادة جديدة =====  
-                    <script>
-                        function openFormAddCorse() {
-                            document.getElementById("subjectForm").classList.remove("hidden");
-                        }
-                        function closeFormAddCorse() {
-                            document.getElementById("subjectForm").classList.add("hidden");
-                        }
-                    </script>
-            </div> -->
-        </div>
-    </div>
-
     <footer
     class="bg-zinc-50 text-center text-surface/75 dark:bg-neutral-700 dark:text-white/75 lg:text-left ">
     <div
